@@ -1,7 +1,7 @@
 # Mi Primera API FastAPI - Bootcamp
 
 **👤 Desarrollador**: Brandon Steven Quintero Martinez
-**📧 Email**: 199319087+JuanRojasB@users.noreply.github.com
+**📧 Email**: 199400307+BrandonQuinte@users.noreply.github.com
 **� Privacidad**: Email configurado según mejores prácticas de GitHub
 **�📅 Fecha de creación**: 2025-08-02 17:05:32
 **📂 Ruta del proyecto**: /c/Users/Aprendiz/brandon-quintero/semana1
