@@ -15,10 +15,15 @@ httpx==0.28.1
 idna==3.10
 itsdangerous==2.2.0
 Jinja2==3.1.6
+line_profiler==5.0.0
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2
+memory-profiler==0.61.0
 orjson==3.11.1
+prometheus-fastapi-instrumentator==7.1.0
+prometheus_client==0.23.1
+psutil==7.1.0
 pydantic==2.11.7
 pydantic-extra-types==2.10.5
 pydantic-settings==2.10.1

@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from typing import Optional
 from app.services.optimized_domain_service import OptimizedDomainService
-from app.database import get_db
+from app.database.get_db import get_db
 
 router = APIRouter(prefix="/lang/optimized", tags=["Optimized Domain - Academia Idiomas"])
 

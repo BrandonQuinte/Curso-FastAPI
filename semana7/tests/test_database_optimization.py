@@ -1,9 +1,26 @@
+import sys
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+semana7_dir = os.path.abspath(os.path.join(current_dir, '..'))
+if semana7_dir not in sys.path:
+    sys.path.insert(0, semana7_dir)
 # tests/test_database_optimization.py
 import pytest
 import time
 from sqlalchemy.orm import Session
 from sqlalchemy import text
 from app.services.optimized_domain_service import OptimizedDomainService
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, Session
+
+@pytest.fixture(scope="function")
+def db_session():
+    # Usar SQLite en memoria para pruebas
+    engine = create_engine("sqlite:///:memory:", connect_args={"check_same_thread": False})
+    TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+    session = TestingSessionLocal()
+    yield session
+    session.close()
 
 class TestDatabaseOptimization:
 
