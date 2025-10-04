@@ -1,0 +1,27 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    needs: quality
+    if: github.ref == "refs/heads/main"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to staging
+        run: |
+          echo "Ì∫Ä Deploying to staging environment..."
+          # Aqu√≠ ir√≠an los comandos espec√≠ficos de deployment
+          # para el dominio tipo A asignado
+
+      - name: Health check
+        run: |
+          echo "Ìø• Verificando health check del dominio tipo A..."
+          # curl -f https://api-tipo-a-${{ secrets.DOMAIN_SUFFIX }}/health
+
